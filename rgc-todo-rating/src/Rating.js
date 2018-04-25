@@ -7,23 +7,28 @@ class Rating extends Component {
 
     ratingClicked(rate) {
         this.props.ratingClicked(this.props.id, rate);
+        this.props.valueCallback && this.props.valueCallback(rate);
     }
 
     render() {
-        const state  = this.props.selectedRate
+        const state  = this.props.selectedRate;
+
+        //Below code is to render the value considering 
+        //the scenario where Rating is used in a list
         const ClickedRate = state.filter(star => {
             return this.props.id === star.id
         }).map(currentStar => {
             return <span key={currentStar.id}>{currentStar.rate}</span>
-        })
+        });
+
         return (
-            <div>
+            <div style={this.props.ratingStyle}>
                 <button onClick={this.ratingClicked.bind(this, 1)}>1</button>
                 <button onClick={this.ratingClicked.bind(this, 2)}>2</button>
                 <button onClick={this.ratingClicked.bind(this, 3)}>3</button>
                 <button onClick={this.ratingClicked.bind(this, 4)}>4</button>
                 <button onClick={this.ratingClicked.bind(this, 5)}>5</button>
-                    {ClickedRate}
+                {ClickedRate}
             </div>
         );
     }

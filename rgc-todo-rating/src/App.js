@@ -3,6 +3,19 @@ import Rating from './Rating';
 import Todo from './Todo';
 
 class App extends Component {
+  state = {
+    individualRating: null
+  }
+
+  ratingDefaultStyle = {
+    backgroundColor: '#ffddee',
+    padding: '10px'
+  }
+
+  individualRatingCallBack(rate) {
+    this.setState({ individualRating: rate });
+  }
+
   render() {
     const todoListDataSource1 = [
         {id: 1, todoItem: 'Learn React'},
@@ -20,11 +33,13 @@ class App extends Component {
 
     return (
       <div>
+        <p>Todo list 1</p>
         <Todo
           todoListDataSource={todoListDataSource1}
-          customComponents={Rating}
+          customComponents={() => <Rating ratingStyle={this.ratingDefaultStyle}/>}
         />
         <hr/>
+        <p>Todo list 2</p>
         <Todo
           todoListDataSource={todoListDataSource2}
           customComponents={Rating}
@@ -33,9 +48,16 @@ class App extends Component {
         <Todo
           todoListDataSource={todoListDataSource2}
         />
+        <hr/>
+        <div>
+          <p>It is an individual usage of Rating component</p>
+          <Rating id={333} valueCallback={this.individualRatingCallBack.bind(this)} /><span>Value for AJAX or anything else: {this.state.individualRating}</span>
+        </div>
       </div>
     );
   }
 }
+
+
 
 export default App;
