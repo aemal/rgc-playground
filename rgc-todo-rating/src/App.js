@@ -36,7 +36,7 @@ class App extends Component {
         <p>Todo list 1</p>
         <Todo
           todoListDataSource={todoListDataSource1}
-          customComponents={() => <Rating ratingStyle={this.ratingDefaultStyle}/>}
+          customComponents={(props) => <Rating {...props} ratingStyle={this.ratingDefaultStyle} />}
         />
         <hr/>
         <p>Todo list 2</p>
@@ -51,7 +51,7 @@ class App extends Component {
         <hr/>
         <div>
           <p>It is an individual usage of Rating component</p>
-          <Rating id={333} valueCallback={this.individualRatingCallBack.bind(this)} /><span>Value for AJAX or anything else: {this.state.individualRating}</span>
+          <Rating id={10000} valueCallback={this.individualRatingCallBack.bind(this)} /><span>Value for AJAX or anything else: {this.state.individualRating}</span>
         </div>
       </div>
     );
