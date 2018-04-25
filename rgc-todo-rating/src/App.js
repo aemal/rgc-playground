@@ -36,7 +36,11 @@ class App extends Component {
         <p>Todo list 1</p>
         <Todo
           todoListDataSource={todoListDataSource1}
-          customComponents={(props) => <Rating {...props} ratingStyle={this.ratingDefaultStyle} />}
+          customComponents={(props) => 
+            <Rating 
+              {...props} 
+              ratingStyle={this.ratingDefaultStyle} 
+            />}
         />
         <hr/>
         <p>Todo list 2</p>

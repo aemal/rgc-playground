@@ -11,7 +11,7 @@ class Todo extends Component {
                     <div>{item.todoItem}</div>
                     {
                         CustomComponent !== undefined
-                        ? <CustomComponent  id={item.id} />
+                        ? <CustomComponent id={item.id} />
                         : null
                     }
                 </div>

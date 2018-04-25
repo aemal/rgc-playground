@@ -21,12 +21,13 @@ class Rating extends Component {
         }).map(currentStar => {
             return currentStar.rate
         });
+
         return (
             <div style={this.props.ratingStyle}>
                 <StarRatingComponent
                       name="rate1"
                       starCount={5}
-                      value={ClickedRate}
+                      value={ ClickedRate.length !== 0 ? ClickedRate[0] : 0 }
                       onStarClick={this.ratingClicked.bind(this)}
                     />
                 {ClickedRate}
