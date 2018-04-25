@@ -9,7 +9,6 @@ class Rating extends Component {
     ratingClicked(rate) {
         this.props.ratingClicked(this.props.id, rate);
         this.props.valueCallback && this.props.valueCallback(rate);
-        console.log(rate, this.props.id)
     }
 
     render() {
@@ -22,7 +21,6 @@ class Rating extends Component {
         }).map(currentStar => {
             return currentStar.rate
         });
-        console.log(ClickedRate)
         return (
             <div style={this.props.ratingStyle}>
                 <StarRatingComponent
