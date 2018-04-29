@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import StarRatingComponent from 'react-star-rating-component';
 import { bindActionCreators } from 'redux';
@@ -22,7 +22,7 @@ class Rating extends Component {
         });
 
         return (
-            <div>
+            <Fragment>
                 <StarRatingComponent
                       name="rate1"
                       starCount={5}
@@ -30,7 +30,7 @@ class Rating extends Component {
                       onStarClick={this.ratingClicked.bind(this)}
                     />
                 {ClickedRate}
-            </div>
+            </Fragment>
         );
     }
 
