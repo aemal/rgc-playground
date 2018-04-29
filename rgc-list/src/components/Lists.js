@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 
  const Lists = ({todo, children}) => {
   const mappedTodo = todo.map(todo => {
-      return <li key={todo.id}>{todo.text}</li>
+      return <li key={todo.id}>{children(todo)}</li>
     })
     return (
-          children(mappedTodo)
+          <ul>
+            {mappedTodo}
+          </ul>
     )
 }
 

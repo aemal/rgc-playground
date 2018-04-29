@@ -7,7 +7,7 @@ class App extends Component {
       <div>
         <h1>Hello, World</h1>
         <Lists todo={TodoData}>
-            {(todo) => <ul>{todo}</ul>}
+            {(todo) => todo.text}
         </Lists>
       </div>
     )
