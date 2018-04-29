@@ -6,7 +6,7 @@ const List = ({ render, todo }) => {
     );
 };
 
-List.displayName = 'List';
+List.displayName = 'List'
 
 List.propTypes = {
     todo: PropTypes.shape({
@@ -14,7 +14,7 @@ List.propTypes = {
     id: PropTypes.string.isRequired,
     }).isRequired,
     render: PropTypes.func.isRequired
-};
+}
 
 
-export default List;
+export default List

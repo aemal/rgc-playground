@@ -10,7 +10,7 @@ import List from './List'
             render={children}
             rating={rating}
             todo={todo} />
-            {rating ? "Rating" : null}
+            {rating ? 'Rating' : null}
         </li>
       )
     })
@@ -31,6 +31,6 @@ Lists.propTypes = {
     })).isRequired,
     children: PropTypes.func.isRequired,
     rating: PropTypes.bool
-};
+}
 
 export default Lists
