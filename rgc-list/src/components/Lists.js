@@ -1,9 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import List from './List'
 
- const Lists = ({todo, children}) => {
+ const Lists = ({todo, children, rating}) => {
   const mappedTodo = todo.map(todo => {
-      return <li key={todo.id}>{children(todo)}</li>
+      return(
+        <li key={todo.id}>
+          <List
+            render={children}
+            rating={rating}
+            todo={todo} />
+            {rating ? "Rating" : null}
+        </li>
+      )
     })
     return (
           <ul>
@@ -20,7 +29,8 @@ Lists.propTypes = {
     text: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     })).isRequired,
-    children: PropTypes.func.isRequired
+    children: PropTypes.func.isRequired,
+    rating: PropTypes.bool
 };
 
 export default Lists

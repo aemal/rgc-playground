@@ -1,0 +1,1 @@
+export const RATING = 'RATING_CLICKED';

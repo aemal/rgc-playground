@@ -6,8 +6,8 @@ class App extends Component {
     return (
       <div>
         <h1>Hello, World</h1>
-        <Lists todo={TodoData}>
-            {(todo) => todo.text}
+        <Lists todo={TodoData} rating={false}>
+            {todo => todo.text}
         </Lists>
       </div>
     )

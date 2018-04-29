@@ -36,7 +36,7 @@ class App extends Component {
         <p>Todo list 1</p>
         <Todo
           todoListDataSource={todoListDataSource1}
-          customC   omponents={(props) =>
+          customComponents={(props) =>
             <Rating
               {...props}
               ratingStyle={this.ratingDefaultStyle}
