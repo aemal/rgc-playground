@@ -27,7 +27,7 @@ Lists.displayName = 'Lists'
 Lists.propTypes = {
     todo: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     })).isRequired,
     children: PropTypes.func.isRequired,
     rating: PropTypes.bool

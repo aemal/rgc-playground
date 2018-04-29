@@ -11,7 +11,7 @@ List.displayName = 'List';
 List.propTypes = {
     todo: PropTypes.shape({
     text: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     }).isRequired,
     render: PropTypes.func.isRequired
 };
