@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StarRatingComponent from 'react-star-rating-component';
+import Rating from '../components/Rating';
 
 
 class App extends Component {
@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div>
         <h1>RGC Rating</h1>
-        <StarRatingComponent
+        <Rating
           name="starCount"
           starCount={5} />
       </div>
