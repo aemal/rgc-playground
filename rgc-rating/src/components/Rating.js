@@ -7,7 +7,7 @@ import * as Actions from '../redux/actions/Actions';
 class Rating extends Component {
 
     ratingClicked(rate) {
-        this.props.ratingClicked(1, rate);
+        this.props.ratingClicked(this.props.id, rate);
     }
 
     render() {
@@ -16,7 +16,7 @@ class Rating extends Component {
         //Below code is to render the value considering
         //the scenario where Rating is used in a list
          const ClickedRate = state.filter(star => {
-           return 1 === star.id
+           return this.props.id === star.id
         }).map(currentStar => {
             return currentStar.rate
         });

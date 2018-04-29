@@ -8,8 +8,7 @@ class App extends Component {
       <div>
         <h1>RGC Rating</h1>
         <Rating
-          name="starCount"
-          starCount={5} />
+          id={2} />
       </div>
     );
   }
