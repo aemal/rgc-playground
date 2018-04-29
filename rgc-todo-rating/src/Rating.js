@@ -16,8 +16,8 @@ class Rating extends Component {
 
         //Below code is to render the value considering
         //the scenario where Rating is used in a list
-        const ClickedRate = state.filter(star => {
-            return this.props.id === star.id
+         const ClickedRate = state.filter(star => {
+           return this.props.id === star.id
         }).map(currentStar => {
             return currentStar.rate
         });

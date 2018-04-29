@@ -27,7 +27,7 @@ class App extends Component {
     const todoListDataSource2 = [
         {id: 11, todoItem: 'Go gym'},
         {id: 21, todoItem: 'Spend time on youtube'},
-        {id: 31, todoItem: 'Code challenge'},
+        {id: 31,  todoItem: 'Code challenge'},
         {id: 41, todoItem: 'Do nothing!'}
     ];
 
@@ -36,10 +36,10 @@ class App extends Component {
         <p>Todo list 1</p>
         <Todo
           todoListDataSource={todoListDataSource1}
-          customComponents={(props) => 
-            <Rating 
-              {...props} 
-              ratingStyle={this.ratingDefaultStyle} 
+          customC   omponents={(props) =>
+            <Rating
+              {...props}
+              ratingStyle={this.ratingDefaultStyle}
             />}
         />
         <hr/>
