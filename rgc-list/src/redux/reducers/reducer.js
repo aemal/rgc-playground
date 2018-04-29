@@ -8,7 +8,6 @@ const ratingReducer = (state = initialState, { type, payload }) => {
         let existingItem = state.filter(item => {
                 return item.id === payload.id
             });
-        console.log(payload)
             const newState =  existingItem.length === 0
             ? [payload, ...state]
             : state.map(item =>
