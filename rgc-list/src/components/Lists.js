@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import List from './List'
+import Rating from './Rating'
 
  const Lists = ({todo, children, rating}) => {
   const mappedTodo = todo.map(todo => {
@@ -10,7 +11,10 @@ import List from './List'
             render={children}
             rating={rating}
             todo={todo} />
-            {rating ? 'Rating' : null}
+            {rating
+              ? <Rating
+                  id={todo.id} />
+              : null}
         </li>
       )
     })

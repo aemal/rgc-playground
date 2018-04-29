@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <Fragment>
         <h1>React Geeks</h1>
-        <Lists todo={TodoData} rating={false}>
+        <Lists todo={TodoData} rating={true}>
             {todo => todo.text}
         </Lists>
       </Fragment>
